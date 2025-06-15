@@ -59,7 +59,11 @@ Breaking out USB over an edge connector and running the data lines for a few cen
 
 I've never built a keyboard with VIK support in mind before, but I'm trying to future-proof this keyboard a bit. It'd be neat to power a trackball or trackpad via a TypePak. VIK's pinout is: `3V3, GND, SDA, SCL, RGB, 5V, GPIO1, MOSI, GPIO2, CS, MISO, and SCLK`. This is flipped on the TypePak so that when it's wired up to the connector, all the data pins would be in the correct order. The trick is that the TypePak doesn't have the 3v3, GND, or 5V pins mixed in with the rest. For the sake of maximizing the amount of GPIO, it would need to grab the GND off of the USB pinout, one of the 3V3 pinouts (with a selectable jumper pad if you wanted to get clever about it), and then... VBUS for the 5V pin? I don't know if this would actually meet the VIK spec, but it seems like most boards are focused on 3v3 devices. Also, shoot, I just realized VIK wanted one of those Analog In pins for its two GPIOs.
 
-I was hoping to make a large VIK compatible unibody with this keyboard at some point, but there's surprisingly not enough pins to do it without a shift register. 12 columns and 5 rows is still 16 pins even if you optimize the matrix. It doesn't seem worth it to drop the `RESET` pin and rely on the keyboard firmware's software reset feature, and only offer the toggle-able 3V3. Shift register it is! 
+I was hoping to make a large VIK compatible unibody with this keyboard at some point, but there's surprisingly not enough pins to do it without a shift register. 12 columns and 5 rows is still 16 pins even if you optimize the matrix. It doesn't seem worth it to drop the `RESET` pin and rely on the keyboard firmware's software reset feature, and only offer the toggle-able 3V3. Shift register it is!
+
+My understanding is that any high frequency pin can be used for SPI and I2C, but I should double-check that.
+
+Again, this will be my first time working with a bare nRF52840 module, so we'll see how the placement on those programming pins goes. Wish me luck!
 
 ### Stray Thoughts
 
