@@ -1,8 +1,8 @@
 # TypePak Advance
 
-![./images/pcb.jpg](The TypePak PCB.)
+![The TypePak PCB.](images/pcb.jpg)
 
-![./images/typepak.jpg](The earlier TypePac design.)
+![The earlier TypePac design.](images/typepak.jpg)
 
 The [TypePak Advance](https://github.com/ImStuBTW/typeboy-advance) is an update to my original [TypePak](https://github.com/ImStuBTW/typeboy_and_typepak/tree/main/typepak) design from 2023. The original idea for the concept was to put as many wireless keyboard components as possible inside of the shell of a Game Boy Advance cartridge. This allows you to more easily move the microcontroller between builds, but honestly it's primarily done for aesthetic reasons. Slapping a Game Boy cartridge port and cartridge onto the side of one's keyboard takes up a decent amount of space compared to a Pro Micro or a XIAO, but it does look neat. If you're iterating through designs rapidly, it also cuts down on the amount of considerations you need to make for things like battery JST headers.
 
@@ -21,7 +21,7 @@ The TypePak Advance leveraged the [nRFMicro](https://github.com/joric/nrfmicro) 
 
 ## Pinout
 
-![./images/pinout.jpg](The TypePak Advance's pintout.)
+![The TypePak Advance's pintout.](images/pinout.jpg)
 
 The TypePak Advance offers an indulgent 32 pins on its edge connector. A minimalist XAIO this is not. Nine of these pins are reserved for power, data, and board management features, but that still leaves you with 23 pins of GPIO. From left to right, you've got:
 
@@ -39,7 +39,7 @@ The TypePak Advance offers an indulgent 32 pins on its edge connector. A minimal
 
 ## Open Considerations
 
-![./images/schematic.jpg](The TypePak schematic.)
+![The TypePak schematic.](images/schematic.jpg)
 
 I'm by no means an EE, and this is my first time working with a bare E73 nRF52840. Before I send this to the fab, I'm looking into the following topics. Consider this a to-do list of items I need to verify.
 
