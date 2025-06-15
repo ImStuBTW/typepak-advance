@@ -4,20 +4,20 @@
 
 ![The earlier TypePac design.](images/typepak.jpg)
 
-The [TypePak Advance](https://github.com/ImStuBTW/typeboy-advance) is an update to my original [TypePak](https://github.com/ImStuBTW/typeboy_and_typepak/tree/main/typepak) design from 2023. The original idea for the concept was to put as many wireless keyboard components as possible inside of the shell of a Game Boy Advance cartridge. This allows you to more easily move the microcontroller between builds, but honestly it's primarily done for aesthetic reasons. Slapping a Game Boy cartridge port and cartridge onto the side of one's keyboard takes up a decent amount of space compared to a Pro Micro or a XIAO, but it does look neat. If you're iterating through designs rapidly, it also cuts down on the amount of considerations you need to make for things like battery JST headers.
+The [TypePak Advance](https://github.com/ImStuBTW/typeboy-advance) is an update to my original [TypePak](https://github.com/ImStuBTW/typeboy_and_typepak/tree/main/typepak) design from 2023. The original idea for the concept was to put as many wireless keyboard components as possible inside of the shell of a Game Boy Advance cartridge. This allows you to more easily move the microcontroller between builds, but honestly it's primarily done for aesthetic reasons. Slapping a Game Boy cartridge port and cartridge onto the side of one's keyboard takes up a decent amount of space compared to a Pro Micro or a XIAO, but it does look neat. If you're iterating through designs rapidly, it does manage to cut down on some build considerations like where to put the LiPo battery.
 
-The original TypePak design had a few flaws. It embedded an entire XIAO nRF52840 microcontroller onto the Game Boy cartridge breakout board. This simplified things on the design side, but complicated the build substantially. The XIAO's USB port needed to be exposed to flash new firmware and charge the TypePak's battery, so a large chunk needed to be cut out with a Dremel. The USB port was also fairly tall, and it had a nasty habit of crushing the integrated Sharp Memory Display as one tried to slide the enclosure together. In total 3 original TypePaks have been built, and only one managed to get a working display. Finally the pinout situation is less than ideal. The XIAO is famously limited on the amount of GPIO ports it has on offer, so the original TypePak leveraged a shift register to provide a few additional column pins. This worked well enough for split keyboards, but it's still not enough for unibody designs. In hindsight I *really* should have broken out the shift register's daisy-chain pin.
+The original TypePak design had a few flaws. It embedded an entire XIAO nRF52840 microcontroller onto the Game Boy cartridge breakout board. This simplified things on the design side, but complicated the assembly substantially. The XIAO's USB port needed to be exposed to flash new firmware and charge the TypePak's battery, so a large chunk needed to be cut out with a Dremel. The USB port was also fairly tall, and it had a nasty habit of crushing the integrated Sharp Memory Display as one tried to slide the enclosure together. In total 3 original TypePaks have been built, and only one managed to get a working display. Finally the pinout situation is less than ideal. The XIAO is famously limited on the amount of GPIO ports it has on offer, so the original TypePak leveraged a shift register to provide a few additional column pins. This worked well enough for split keyboards, but it's still not enough for unibody designs. In hindsight I *really* should have broken out the shift register's daisy-chain pin.
 
-So this v2 attempt is seeking to clean up a few lingering issues with the TypePak. The TypePak Advance's largest changes are:
+This v2 attempt is seeking to clean up a few lingering issues with the TypePak. The TypePak Advance's largest changes are:
 - Leveraging a bare nRF52840 module to save space and give the display more space.
-- Dropping the integrated USB port entirely in favor of breaking out those pins over the edge connector.
+- Dropping the integrated USB port entirely in favor of breaking out those pins over the edge connector. No more cartridge shell modifications!
 - More pins! The TypePak Advance has 23 GPIO pins exposed in total.
     - The nRF52840's high frequency pins are grouped together with the [VIK](https://github.com/sadekbaroudi/vik) keyboard extension standard in mind. After the VIK's SPI, I2C, RGB, and 2 GPI pins, the TypePak Advance still has 14 additional pins to work with.
-- Features an always-on 3v3 pin and a software controlled 3v3 pin to allow persistent and power conscious peripherals. 
+- Features an always-on 3v3 pin and a toggle-able software controlled 3v3 pin to allow persistent and power conscious peripherals. 
 
 To build a TypePak Advance compatible keyboard, one would need to include a Game Boy cartridge slot, a USB port for charging and data, a power switch, and a reset button.
 
-The TypePak Advance leveraged the [nRFMicro](https://github.com/joric/nrfmicro) project for the basis of its schematic, and owes a great deal to the team's excellent documentation. Thanks y'all! The Game Boy Cartridge PCB designs are from [KiCAD-GamePaks](https://github.com/djedditt/kicad-gamepaks)
+The TypePak Advance leveraged the [nRFMicro](https://github.com/joric/nrfmicro) project for the basis of its schematic, and owes a great deal to the project's excellent documentation. Thanks y'all! The Game Boy Cartridge PCB designs are from [KiCAD-GamePaks](https://github.com/djedditt/kicad-gamepaks).
 
 ## Pinout
 
@@ -50,8 +50,6 @@ The nRFMicro has `VBAT`, `VBUS`, `nRF_VDD`, `EXT_VCC`, a `POWER_PIN`, and a `BAT
 Typically when working with batteries I put the switch onto the battery's `GND` lead so that the power pin isn't being as futzed with as much. The nRFMicro puts the switch on the power pin however, and I don't want to mess up any of the charging circuitry by accidentally having the battery's positive lead wired up when its not supposed to.
 
 Breaking out the toggle-able `EXT_VCC` and always-on `nRF_VDD` looks worth it on paper, but it's been a bit since I've made a wireless keyboard. I'm not sure how many builds actually feature a mixture of components one would want powered up and powered down while wireless. Keeping the display on was my largest concern. I do have some spare GPIO pins I could break out if wanted an even number of pins on the board.
-
-I tossed a jumper pad onto the `BAT_OUT` and `VBAT` pins in case you'd like your TypePak to always be powered up. It'll die in about a week and won't be as portable, but you won'tr have to build a power switch onto your keyboard.
 
 ### Pins
 
