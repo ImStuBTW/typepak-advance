@@ -5511,7 +5511,7 @@
 	)
 	(text "Battery monitor"
 		(exclude_from_sim no)
-		(at 194.31 129.794 0)
+		(at 192.278 129.794 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -5729,7 +5729,7 @@
 		(uuid "77488316-1989-4a08-af44-86573fdf3e48")
 	)
 	(junction
-		(at 214.63 142.24)
+		(at 214.63 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "78c8e7e9-70c8-4343-86ce-6218e17a22cd")
@@ -5784,7 +5784,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 133.35) (xy 223.52 137.16)
+			(xy 223.52 129.54) (xy 223.52 133.35)
 		)
 		(stroke
 			(width 0)
@@ -5844,7 +5844,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 142.24) (xy 214.63 142.24)
+			(xy 213.36 138.43) (xy 214.63 138.43)
 		)
 		(stroke
 			(width 0)
@@ -5904,7 +5904,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 154.94) (xy 214.63 157.48)
+			(xy 214.63 151.13) (xy 214.63 153.67)
 		)
 		(stroke
 			(width 0)
@@ -6074,7 +6074,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 142.24) (xy 214.63 147.32)
+			(xy 214.63 138.43) (xy 214.63 143.51)
 		)
 		(stroke
 			(width 0)
@@ -6444,7 +6444,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 142.24) (xy 215.9 142.24)
+			(xy 214.63 138.43) (xy 215.9 138.43)
 		)
 		(stroke
 			(width 0)
@@ -7046,7 +7046,7 @@
 	)
 	(global_label "EXT_VCC"
 		(shape input)
-		(at 223.52 133.35 180)
+		(at 223.52 129.54 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7056,7 +7056,7 @@
 		)
 		(uuid "20395d4c-ee6b-43d7-a31b-f1ea63b4e062")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 212.6125 133.35 0)
+			(at 212.6125 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7926,7 +7926,7 @@
 	)
 	(global_label "POWER_PIN"
 		(shape input)
-		(at 213.36 142.24 180)
+		(at 213.36 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7936,7 +7936,7 @@
 		)
 		(uuid "b55f9216-938c-4283-99b0-19e0981c245e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.731 142.24 0)
+			(at 199.731 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8014,7 +8014,7 @@
 	)
 	(global_label "nRF_VDD"
 		(shape input)
-		(at 223.52 147.32 270)
+		(at 223.52 143.51 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8024,7 +8024,7 @@
 		)
 		(uuid "c64b6d6a-dfd8-4393-8e79-a6ef4b8e2c7d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 223.52 158.409 90)
+			(at 223.52 154.599 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8457,7 +8457,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 			(at 46.355 141.605 0)
 			(effects
 				(font
@@ -9413,7 +9413,7 @@
 	)
 	(symbol
 		(lib_id "nrfmicro-rescue:BSS83P")
-		(at 220.98 142.24 0)
+		(at 220.98 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9421,7 +9421,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005ebc38d9")
 		(property "Reference" "Q2"
-			(at 226.06 140.335 0)
+			(at 226.06 136.525 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9430,7 +9430,7 @@
 			)
 		)
 		(property "Value" "AO3407"
-			(at 226.06 142.24 0)
+			(at 226.06 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9438,8 +9438,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 226.06 144.145 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
+			(at 226.06 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9450,7 +9450,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 142.24 0)
+			(at 220.98 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9460,7 +9460,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.98 142.24 0)
+			(at 220.98 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9822,7 +9822,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 214.63 151.13 0)
+		(at 214.63 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9830,7 +9830,7 @@
 		(dnp no)
 		(uuid "5ba1d867-26b2-4215-852b-a71c26ab1ccd")
 		(property "Reference" "R9"
-			(at 216.408 149.9616 0)
+			(at 216.408 146.1516 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9839,7 +9839,7 @@
 			)
 		)
 		(property "Value" "2M"
-			(at 216.408 152.273 0)
+			(at 216.408 148.463 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9848,7 +9848,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 212.852 151.13 90)
+			(at 212.852 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9857,7 +9857,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 214.63 151.13 0)
+			(at 214.63 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9866,7 +9866,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 214.63 151.13 0)
+			(at 214.63 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10256,7 +10256,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5_HandSoldering"
 			(at 123.19 151.765 0)
 			(effects
 				(font
@@ -10528,7 +10528,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5_HandSoldering"
 			(at 61.595 142.875 0)
 			(effects
 				(font
@@ -10943,7 +10943,7 @@
 	)
 	(symbol
 		(lib_id "nrfmicro-rescue:GND")
-		(at 214.63 157.48 0)
+		(at 214.63 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10951,7 +10951,7 @@
 		(dnp no)
 		(uuid "ca6bf03f-50fa-4daa-a563-1cf0146b1f14")
 		(property "Reference" "#PWR0118"
-			(at 214.63 163.83 0)
+			(at 214.63 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10960,7 +10960,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 214.757 161.8742 0)
+			(at 214.757 158.0642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10968,7 +10968,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 214.63 157.48 0)
+			(at 214.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10977,7 +10977,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 157.48 0)
+			(at 214.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10986,7 +10986,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 214.63 157.48 0)
+			(at 214.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
